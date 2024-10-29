@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pytask"
+version = "0.1.0"
+description = "Quick idea / task note"
+authors = ["crazybird <roy7alexandre@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+keyboard = "^0.13.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+main = "pytask.key:main"

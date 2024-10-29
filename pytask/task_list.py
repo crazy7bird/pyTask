@@ -10,11 +10,16 @@ class backlog() :
     def fileLoad(self, filePath : Path = None) :
         if filePath is None :
             filePath = self.filePath
-        with open(filePath, "rt") as file:
-            for line in file.readlines() :
-                task = line.rstrip('\n')
-                if task :
-                    self.taskList.append(task)
+
+        #Popo code
+        try :
+            with open(filePath, "rt") as file:
+                for line in file.readlines() :
+                    task = line.rstrip('\n')
+                    if task :
+                        self.taskList.append(task)
+        except :
+            pass
 
     def list_backlog(self) :
         return self.taskList
