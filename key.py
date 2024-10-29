@@ -62,37 +62,37 @@ class backlog() :
             for line in self.taskList:
                 f.write(f"{line}\n")
 
-class window():
-    def __init__(self):
-        self.window = None
-        self.user_input = None
-        pass
-    def start(self):
-        window = self.window
-        if window is not None :
-            return
-        window = tk.Tk()
-        window.geometry("275x75")
-        window.wm_attributes('-toolwindow', 'True')
-        window.wm_attributes('-topmost','True')
-        window.bind('<Return>',killAwin)
-        window.title("Quick Note ToDo")
-        self.user_input = tk.StringVar()
-        entry = tk.Entry(window, textvariable=user_input)
-        entry.pack(fill='both')
-        entry.focus()
-        window.after(500,steal_focus,window) 
-    def stop(self) -> None:
-        value_ret = self.user_input.get()
-        print(f"Final Entry : {value_ret}")
-        window.destroy()
-        self.window = None
-        self.user_input = None
-        return value_ret
+# class window():
+#     def __init__(self):
+#         self.window = None
+#         self.user_input = None
+#         pass
+#     def start(self):
+#         window = self.window
+#         if window is not None :
+#             return
+#         window = tk.Tk()
+#         window.geometry("275x33")
+#         window.wm_attributes('-toolwindow', 'True')
+#         window.wm_attributes('-topmost','True')
+#         window.bind('<Return>',killAwin)
+#         window.title("Quick Note ToDo")
+#         self.user_input = tk.StringVar()
+#         entry = tk.Entry(window, textvariable=user_input)
+#         entry.pack(fill='both')
+#         entry.focus()
+#         window.after(500,steal_focus,window) 
+#     def stop(self) -> None:
+#         value_ret = self.user_input.get()
+#         print(f"Final Entry : {value_ret}")
+#         window.destroy()
+#         self.window = None
+#         self.user_input = None
+#         return value_ret
 
 
 b = backlog()
-w = window()
+#w = window()
 
 t = time.time()
 while True :
