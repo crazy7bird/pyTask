@@ -22,8 +22,6 @@ class ihm():
         self.cursor = 0 # Position of the >
         self.clear_screen()
         self.kbhit = KBhit.KBHit()
-        #keyboard.on_press_key("up arrow", lambda _: print('mkay'))
-        #keyboard.on_press_key("down arrow", lambda _: print('mkayMouse'))
 
         pass
 
@@ -52,7 +50,7 @@ class ihm():
         for i,el in enumerate(self.list) :
             if self.cursor == i :
                 print("> ",end="")
-            elif "[V]" in el :     
+            if "[V]" in el :     
                 print('\u0336'.join(el) + '\u0336')
             else :
                 print(el)
