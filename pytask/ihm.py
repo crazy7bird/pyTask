@@ -52,7 +52,10 @@ class ihm():
         for i,el in enumerate(self.list) :
             if self.cursor == i :
                 print("> ",end="")
-            print(el)
+            elif "[V]" in el :     
+                print('\u0336'.join(el) + '\u0336')
+            else :
+                print(el)
 
     def up(self):
         if self.cursor > 0 :
