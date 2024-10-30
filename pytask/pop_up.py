@@ -24,6 +24,7 @@ class window() :
     def start(self):
         if self.window is not None :
             self.steal_focus()
+            self.user_start = False
             return
         self.window = tk.Tk()
         self.window.geometry("275x75")
